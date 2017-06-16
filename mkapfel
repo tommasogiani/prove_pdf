@@ -1,0 +1,5 @@
+all: apfelprova.cxx 
+	g++ apfelprova.cxx -o apfelprova_cxx -I $(shell lhapdf-config --incdir) -I $(shell apfel-config --incdir) -L $(shell lhapdf-config --libdir) -L $(shell apfel-config --libdir) -lLHAPDF -lAPFEL -lAPFELevol
+	
+clean:
+	rm apfelprova_cxx 
